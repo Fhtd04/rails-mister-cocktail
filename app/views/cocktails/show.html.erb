@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class= "add">
   <strong>Name:</strong>
   <%= @cocktail.name %>
 </p>
 
 <p>
-  <%= link_to '+ Add a Dose', new_cocktail_dose_path(@cocktail) %>
+  <%= link_to '+ Add a Dose', new_cocktail_dose_path(@cocktail), class: "add" %>
 </p>
 
 <p id="notice"><%= notice %></p>
 
 <% if @cocktail.doses.count.zero? %>
-  <p>
+  <p class= "add">
     Be the first to leave a dose
   </p>
 
@@ -21,10 +21,10 @@
   <ol>
     <% @cocktail.doses.each do |dose| %>
 
-      <li>
+      <li class= "add">
         <%= dose.ingredient.name %>:
         <%= dose.description %>
-        <%= link_to dose_path(dose.id), method: :delete, data: { confirm: "Delete #{dose.ingredient.name}?" } do %>
+        <%= link_to dose_path(dose.id), class: "add", method: :delete, data: { confirm: "Delete #{dose.ingredient.name}?" } do %>
           <i class="far fa-trash-alt" aria-hidden="true"></i>
         <% end %>
       </li>
@@ -33,4 +33,4 @@
 
 <% end %>
 
-<%= link_to 'Back', cocktails_path %>
+<%= link_to 'Back', cocktails_path, class: "add" %>
