@@ -1,0 +1,26 @@
+.banner {
+  background-size: cover;
+  height: 40vh;
+}
+
+.banner h1 {
+  color: white;
+  opacity: 0,5;
+  margin-left: 10px;
+
+}
+
+.banner p {
+  color: white;
+  opacity: 0,5;
+  margin-left: 10px;
+}
+
+.btn {
+  color: white;
+
+  &:hover {
+    color: grey;
+  }
+
+}
