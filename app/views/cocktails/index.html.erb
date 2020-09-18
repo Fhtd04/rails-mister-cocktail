@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cocktails List</h1>
+
+<button><%= link_to '+ add a new cocktail', new_cocktail_path %></button>
+
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media-manager.noticiasaominuto.com/1920/5f228c45cbb6f.jpg)"><%= cocktail.name %></div>
+          <div class="card-actions">
+            <%= link_to 'More info', cocktail_path(cocktail) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
