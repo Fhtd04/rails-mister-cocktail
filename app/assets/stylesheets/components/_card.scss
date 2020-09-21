@@ -18,6 +18,21 @@
   }
 }
 
+.card-no-image {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F4F4F4;
+  font-size: 28px;
+  font-weight: regular;
+  border-radius: 5px;
+}
+
+
 .link_card {
   color: #F4F4F4;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
