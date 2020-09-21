@@ -1,22 +1,19 @@
-<div class="banner" style="background-image: url('<%= image_path 'banner4.jpg' %>');">
-  <div class="banner-content">
-    <h1>Drinks for your party</h1>
-    <p class="share">Share your best cocktail</p>
-  </div>
-</div>
+<%= render 'shared/banner' %>
 
 <p id="notice"><%= notice %></p>
 
-<h1 class= "add">Cocktails List</h1>
+<div class="container">
 
+  <h1 class= "add">Cocktails List</h1>
 
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'drink1.jpg' %>')"><%= link_to cocktail.name, cocktail_path(cocktail), class: "link_card" %></div>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'drink1.jpg' %>')"><%= link_to cocktail.name, cocktail_path(cocktail), class: "link_card" %></div>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+</div>
 
