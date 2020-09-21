@@ -1,12 +1,14 @@
 .banner {
-  background-size: contain;
+  background-size: cover;
   height: 40vh;
 }
 
 .banner h1 {
   color: #F4F4F4;
   opacity: 0,5;
-  margin-left: 10px;
+  margin-left: 15px;
+  padding-top: 20px;
+  text-shadow: 2px 2px 4px grey;
 }
 
 .banner p {
@@ -21,4 +23,11 @@
   &:hover {
     color: grey;
   }
+}
+
+.share {
+  color: #F4F4F4;
+  opacity: 0,5;
+  padding-left: 10px;
+  text-shadow: 2px 2px 4px grey;
 }
